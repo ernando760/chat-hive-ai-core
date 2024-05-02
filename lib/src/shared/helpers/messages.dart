@@ -1,0 +1,35 @@
+import 'package:chat_hive_ai_core/src/shared/extensions/context_extension.dart';
+import 'package:flutter/material.dart';
+
+class Messages {
+  static void showSuccess(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      backgroundColor: Colors.greenAccent,
+      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 7),
+      content: Text(
+        message,
+        style: context.caption12Medium.copyWith(color: context.white),
+      ),
+    ));
+  }
+
+  static void showInfo(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        backgroundColor: Colors.orangeAccent,
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 7),
+        content: Text(
+          message,
+          style: context.caption12Medium.copyWith(color: context.white),
+        )));
+  }
+
+  static void showError(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        backgroundColor: Colors.redAccent,
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 7),
+        content: Text(
+          message,
+          style: context.caption12Medium.copyWith(color: context.white),
+        )));
+  }
+}
