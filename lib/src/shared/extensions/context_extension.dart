@@ -9,12 +9,12 @@ extension ContextExtension on BuildContext {
   Size get sizeOf => MediaQuery.sizeOf(this);
 
   //colors
-  Color get black => ChatHiveAIColors.black;
-  Color get black2 => ChatHiveAIColors.black2;
-  Color get purple => ChatHiveAIColors.purple;
-  Color get white => ChatHiveAIColors.white;
-  Color get gray => ChatHiveAIColors.gray;
-  Color get red => ChatHiveAIColors.red;
+  Color get black => const Color(0xFF0C120C);
+  Color get darkGrey => Colors.grey[900]!;
+  Color get purple => const Color(0xFFA42CD6);
+  Color get white => Colors.white;
+  Color get lightGrey => Colors.grey[100]!;
+  Color get red => const Color(0xFFC1292E);
 
   //TextStyles
   TextStyle get body16Medium => ChatHiveAITextStyles.body16Medium;
