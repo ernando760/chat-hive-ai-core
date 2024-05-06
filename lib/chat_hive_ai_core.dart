@@ -4,7 +4,6 @@ export './src/shared/theme/chat_hive_ai_theme.dart';
 export './src/widgets/inputs/chat_hive_ai_text_field.dart';
 export 'src/widgets/btns/chat_hive_ai_icon_button.dart';
 export './src/widgets/btns/chat_hive_ai_google_button.dart';
-export './src/shared/theme/chat_hive_ai_colors.dart';
 export './src/shared/theme/chat_hive_ai_text_styles.dart';
 export 'src/widgets/btns/chat_hive_ai_toggle_theme_button.dart';
 export './src/chat_hive_ai_app_main.dart';
