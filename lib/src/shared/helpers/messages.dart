@@ -5,7 +5,7 @@ class Messages {
   static void showSuccess(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       backgroundColor: Colors.greenAccent,
-      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 7),
+      padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 5),
       content: Text(
         message,
         style: context.caption12Medium.copyWith(color: context.white),
@@ -16,7 +16,7 @@ class Messages {
   static void showInfo(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         backgroundColor: Colors.orangeAccent,
-        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 7),
+        padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 5),
         content: Text(
           message,
           style: context.caption12Medium.copyWith(color: context.white),
@@ -26,7 +26,7 @@ class Messages {
   static void showError(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         backgroundColor: Colors.redAccent,
-        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 7),
+        padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 5),
         content: Text(
           message,
           style: context.caption12Medium.copyWith(color: context.white),

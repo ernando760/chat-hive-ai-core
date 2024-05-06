@@ -1,35 +1,35 @@
 import 'package:flutter/material.dart';
 
-mixin MessageStateMixin on ChangeNotifier {
-  String? _messageInfo = '';
-  String? _messageSuccess = '';
-  String? _messageError = '';
+enum TypeMessage {
+  error,
+  success,
+  info;
+}
 
-  String? get messageInfo => _messageInfo;
-  String? get messageSuccess => _messageSuccess;
-  String? get messageError => _messageError;
+mixin MessagesStateMixin on ChangeNotifier {
+  TypeMessage? typeMessage;
+  String? message;
 
-  void showInfo(String message) {
-    _messageInfo = "";
-    _messageInfo = message;
-    // notifyListeners();
+  void showMessageError(String value) {
+    clearMessage();
+    typeMessage = TypeMessage.error;
+    message = value;
   }
 
-  void showSuccess(String message) {
-    _messageSuccess = "";
-    _messageSuccess = message;
-    // notifyListeners();
+  void showMessageInfo(String value) {
+    clearMessage();
+    typeMessage = TypeMessage.info;
+    message = value;
   }
 
-  void showError(String message) {
-    _messageError = "";
-    _messageError = message;
-    // notifyListeners();
+  void showMessageSuccess(String value) {
+    clearMessage();
+    typeMessage = TypeMessage.success;
+    message = value;
   }
 
-  void cleanMessages() {
-    _messageError = "";
-    _messageInfo = "";
-    _messageSuccess = "";
+  void clearMessage() {
+    typeMessage = null;
+    message = null;
   }
 }
