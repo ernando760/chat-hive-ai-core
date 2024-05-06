@@ -21,7 +21,7 @@ class ChatHiveAISettingsCards extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          color: context.isDark ? context.black2 : context.gray),
+          color: context.isDark ? context.darkGrey : context.lightGrey),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -60,7 +60,9 @@ class ChatHiveAISettingsItems extends StatelessWidget {
               label,
               style: labelStyle ??
                   ChatHiveAITextStyles.caption10Medium.copyWith(
-                      color: context.isDark ? context.gray : context.black2),
+                      color: context.isDark
+                          ? context.lightGrey
+                          : context.darkGrey),
             )
           ],
         ));

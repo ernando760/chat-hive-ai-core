@@ -20,7 +20,7 @@ class ChatHiveAiGoogleButton extends StatelessWidget {
       onPressed: onPressed,
       padding: padding,
       backgroundColor:
-          context.isDark ? context.black2.withOpacity(.2) : context.gray,
+          context.isDark ? context.darkGrey.withOpacity(.2) : context.lightGrey,
       child: FittedBox(
         fit: BoxFit.cover,
         child: Row(

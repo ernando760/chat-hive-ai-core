@@ -21,7 +21,7 @@ class ChatHiveAiDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: context.isDark ? context.black2 : context.gray,
+      backgroundColor: context.isDark ? context.darkGrey : context.lightGrey,
       child: Padding(
         padding:
             padding ?? const EdgeInsets.symmetric(horizontal: 5, vertical: 8),

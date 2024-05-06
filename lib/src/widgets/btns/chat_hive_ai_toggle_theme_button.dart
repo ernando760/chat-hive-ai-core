@@ -16,25 +16,20 @@ class ChatHiveAiToggleThemeButton extends StatelessWidget {
       // constraints: const BoxConstraints(maxHeight: 50, maxWidth: 200),
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          color:
-              context.isDark ? ChatHiveAIColors.black2 : ChatHiveAIColors.gray),
+          color: context.isDark ? context.darkGrey : context.lightGrey),
       child: Row(
         // mainAxisSize: MainAxisSize.min,
         children: [
           ChatHiveAiSwitchButton(
-            backgroundColor: context.isDark
-                ? ChatHiveAIColors.gray
-                : ChatHiveAIColors.black2,
-            foregroundColor: context.isDark
-                ? ChatHiveAIColors.black2
-                : ChatHiveAIColors.gray,
+            backgroundColor:
+                context.isDark ? context.lightGrey : context.darkGrey,
+            foregroundColor:
+                context.isDark ? context.darkGrey : context.lightGrey,
             icon: Icon(
               context.isDark
                   ? Icons.mode_night_outlined
                   : Icons.wb_sunny_outlined,
-              color: context.isDark
-                  ? ChatHiveAIColors.gray
-                  : ChatHiveAIColors.black,
+              color: context.isDark ? context.lightGrey : context.darkGrey,
               size: 14,
             ),
             isSelected: context.isDark,
@@ -43,9 +38,7 @@ class ChatHiveAiToggleThemeButton extends StatelessWidget {
           Text(
             context.isDark ? "Escuro" : "Claro",
             style: ChatHiveAITextStyles.caption10Medium.copyWith(
-              color: context.isDark
-                  ? ChatHiveAIColors.gray
-                  : ChatHiveAIColors.black2,
+              color: context.isDark ? context.lightGrey : context.darkGrey,
             ),
           ),
         ],
